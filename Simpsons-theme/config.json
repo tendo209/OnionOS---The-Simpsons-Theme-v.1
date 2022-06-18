@@ -1,0 +1,44 @@
+{
+    "name":"The Simpsons Theme v.1 - @tendo209",
+	"hideIconTitle":true,
+    "title":{
+        "font":"akbar.ttf",
+        "size":28,
+        "color":"#FFFFFF"
+    },
+    "path":{
+        "font":"akbar.ttf",
+        "size":22,
+        "color":"#FFFFFF"
+    },
+    "hint":{
+        "font":"akbar.ttf",
+        "size":32,
+        "color":"#FFFFFF"
+    },
+    "currentpage":{
+        "font":"akbar.ttf",
+        "size":32,
+        "color":"#FFFFFF"
+    },
+    "total":{
+        "font":"akbar.ttf",
+        "size":32,
+        "color":"#FFFFFF"
+    },
+    "grid":{
+        "font":"akbar.ttf",
+        "fontascii":"Futura.ttf",
+        "grid1x4":24,
+        "grid3x4":16,
+        "color":"#0054a6",
+        "selectedcolor":"#FFFFFF"
+    },
+    "list":{
+        "font":"akbar.ttf",
+        "fontascii":"Futura.ttf",
+        "size":21,
+        "color":"#FFFFFF",
+        "selectedcolor":"#FFFFFF"
+    }
+}

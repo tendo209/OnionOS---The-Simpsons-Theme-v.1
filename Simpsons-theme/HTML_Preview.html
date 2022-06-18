@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta http-equiv="X-UA-Compatible" content="ie=edge">
+		<title>Miyoo Mini Theme Preview</title>
+		<script type="text/javascript">
+			function Battery() {
+				var Image = document.querySelectorAll('#power-icon');
+				var BtnText = document.getElementById('BtnBattery');
+
+				for(var i = 0; i < Image.length; i++) {
+					if (Image[i].src.match("power-full-icon.png")) {
+						Image[i].src = "skin/power-0%-icon.png";
+						BtnText.value = "Battery 0%";
+					}
+					else if (Image[i].src.match("power-0%-icon.png")) {
+						Image[i].src = "skin/power-20%-icon.png";
+						BtnText.value = "Battery 20%";
+					}
+					else if (Image[i].src.match("power-20%-icon.png")) {
+						Image[i].src = "skin/power-50%-icon.png";
+						BtnText.value = "Battery 50%";
+					}
+					else if (Image[i].src.match("power-50%-icon.png")) {
+						Image[i].src = "skin/power-80%-icon.png";
+						BtnText.value = "Battery 80%";
+					}
+					else if (Image[i].src.match("power-80%-icon.png")) {
+						Image[i].src = "skin/power-full-icon.png";
+						BtnText.value = "Battery 100%";
+					}
+				}
+			}
+			function Option() {
+				var Opt1 = document.getElementById('ic-recent');
+				var Opt2 = document.getElementById('ic-favorite');
+				var Opt3 = document.getElementById('ic-game');
+				var Opt4 = document.getElementById('ic-retroarch');
+				var Dot1 = document.getElementById('dot-x-1');
+				var Dot2 = document.getElementById('dot-x-2');
+				var Dot3 = document.getElementById('dot-x-3');
+				var Dot4 = document.getElementById('dot-x-4');
+				var Dot5 = document.getElementById('dot-x-5');
+				var Dot6 = document.getElementById('dot-x-6');
+				var BtnText = document.getElementById('BtnOption');
+				var Opt1Text = document.getElementById('Opt1Text');
+				var Opt2Text = document.getElementById('Opt2Text');
+				var Opt3Text = document.getElementById('Opt3Text');
+				var Opt4Text = document.getElementById('Opt4Text');
+
+				if (Opt1.src.match("ic-recent-f.png")) {
+					Opt1.src = "skin/ic-recent-n.png";
+					Opt2.src = "skin/ic-favorite-f.png";
+					Opt3.src = "skin/ic-game-n.png";
+					Opt4.src = "skin/ic-retroarch-n.png";
+					Dot1.src = "skin/dot-n.png"
+					Dot2.src = "skin/dot-a.png"
+					Dot3.src = "skin/dot-n.png"
+					Dot4.src = "skin/dot-n.png"
+					Dot5.src = "skin/dot-n.png"
+					Dot6.src = "skin/dot-n.png"
+					Opt1Text.innerHTML = "Recent"
+					Opt2Text.innerHTML = "Favorites"
+					Opt3Text.innerHTML = "Consoles"
+					Opt4Text.innerHTML = "Expert"
+					BtnText.value = "Option 2";
+				}
+				else if (Opt2.src.match("ic-favorite-f.png")) {
+					Opt1.src = "skin/ic-recent-n.png";
+					Opt2.src = "skin/ic-favorite-n.png";
+					Opt3.src = "skin/ic-game-f.png";
+					Opt4.src = "skin/ic-retroarch-n.png";
+					Dot1.src = "skin/dot-n.png"
+					Dot2.src = "skin/dot-n.png"
+					Dot3.src = "skin/dot-a.png"
+					Dot4.src = "skin/dot-n.png"
+					Dot5.src = "skin/dot-n.png"
+					Dot6.src = "skin/dot-n.png"
+					Opt1Text.innerHTML = "Recent"
+					Opt2Text.innerHTML = "Favorites"
+					Opt3Text.innerHTML = "Consoles"
+					Opt4Text.innerHTML = "Expert"
+					BtnText.value = "Option 3";
+				}
+				else if (Opt3.src.match("ic-game-f.png")) {
+					Opt1.src = "skin/ic-recent-n.png";
+					Opt2.src = "skin/ic-favorite-n.png";
+					Opt3.src = "skin/ic-game-n.png";
+					Opt4.src = "skin/ic-retroarch-f.png";
+					Dot1.src = "skin/dot-n.png"
+					Dot2.src = "skin/dot-n.png"
+					Dot3.src = "skin/dot-n.png"
+					Dot4.src = "skin/dot-a.png"
+					Dot5.src = "skin/dot-n.png"
+					Dot6.src = "skin/dot-n.png"
+					Opt1Text.innerHTML = "Recent"
+					Opt2Text.innerHTML = "Favorites"
+					Opt3Text.innerHTML = "Consoles"
+					Opt4Text.innerHTML = "Expert"
+					BtnText.value = "Option 4";
+				}
+				else if (Opt4.src.match("ic-retroarch-f.png")) {
+					Opt1.src = "skin/ic-favorite-n.png";
+					Opt2.src = "skin/ic-game-n.png";
+					Opt3.src = "skin/ic-retroarch-n.png";
+					Opt4.src = "skin/ic-app-f.png";
+					Dot1.src = "skin/dot-n.png"
+					Dot2.src = "skin/dot-n.png"
+					Dot3.src = "skin/dot-n.png"
+					Dot4.src = "skin/dot-n.png"
+					Dot5.src = "skin/dot-a.png"
+					Dot6.src = "skin/dot-n.png"
+					Opt1Text.innerHTML = "Favorites"
+					Opt2Text.innerHTML = "Consoles"
+					Opt3Text.innerHTML = "Expert"
+					Opt4Text.innerHTML = "App"
+					BtnText.value = "Option 5";
+				}
+				else if (Opt4.src.match("ic-app-f.png")) {
+					Opt1.src = "skin/ic-game-n.png";
+					Opt2.src = "skin/ic-retroarch-n.png";
+					Opt3.src = "skin/ic-app-n.png";
+					Opt4.src = "skin/ic-setting-f.png";
+					Dot1.src = "skin/dot-n.png"
+					Dot2.src = "skin/dot-n.png"
+					Dot3.src = "skin/dot-n.png"
+					Dot4.src = "skin/dot-n.png"
+					Dot5.src = "skin/dot-n.png"
+					Dot6.src = "skin/dot-a.png"
+					Opt1Text.innerHTML = "Consoles"
+					Opt2Text.innerHTML = "Expert"
+					Opt3Text.innerHTML = "App"
+					Opt4Text.innerHTML = "Settings"
+					BtnText.value = "Option 6";
+				}
+				else if (Opt4.src.match("ic-setting-f.png")) {
+					Opt1.src = "skin/ic-recent-f.png";
+					Opt2.src = "skin/ic-favorite-n.png";
+					Opt3.src = "skin/ic-game-n.png";
+					Opt4.src = "skin/ic-retroarch-n.png";
+					Dot1.src = "skin/dot-a.png"
+					Dot2.src = "skin/dot-n.png"
+					Dot3.src = "skin/dot-n.png"
+					Dot4.src = "skin/dot-n.png"
+					Dot5.src = "skin/dot-n.png"
+					Dot6.src = "skin/dot-n.png"
+					Opt1Text.innerHTML = "Recent"
+					Opt2Text.innerHTML = "Favorites"
+					Opt3Text.innerHTML = "Consoles"
+					Opt4Text.innerHTML = "Expert"
+					BtnText.value = "Option 1";
+				}
+			}
+			function TextDisplay() {
+				var Opt1Text = document.getElementById('Opt1Text');
+				var Opt2Text = document.getElementById('Opt2Text');
+				var Opt3Text = document.getElementById('Opt3Text');
+				var Opt4Text = document.getElementById('Opt4Text');
+				var TextOpen = document.querySelectorAll('#TextOpen');
+				var TextBack = document.querySelectorAll('#TextBack');
+				var ListTitle = document.getElementById('ListTitle');
+				var ListCount = document.querySelectorAll('#ListCount');
+				var ListItem = document.querySelectorAll('#ListItem');
+				var BtnText = document.getElementById('BtnTextDisplay');
+
+				if (BtnText.value.match("Text Enabled")) {
+					Opt1Text.style.display = "none";
+					Opt2Text.style.display = "none";
+					Opt3Text.style.display = "none";
+					Opt4Text.style.display = "none";
+					ListTitle.style.display = "none";
+					BtnText.value = "Text Disabled";
+					for(var i = 0; i < ListItem.length; i++) {
+						ListItem[i].style.display = "none";
+					}
+					for(var i = 0; i < TextOpen.length; i++) {
+						TextOpen[i].style.display = "none";
+					}
+					for(var i = 0; i < TextBack.length; i++) {
+						TextBack[i].style.display = "none";
+					}
+					for(var i = 0; i < ListCount.length; i++) {
+						ListCount[i].style.display = "none";
+					}
+				}
+				else if (BtnText.value.match("Text Disabled")) {
+					Opt1Text.style.display = "block";
+					Opt2Text.style.display = "block";
+					Opt3Text.style.display = "block";
+					Opt4Text.style.display = "block";
+					ListTitle.style.display = "block";
+					BtnText.value = "Text Enabled";
+					for(var i = 0; i < ListItem.length; i++) {
+						ListItem[i].style.display = "block";
+					}
+					for(var i = 0; i < TextOpen.length; i++) {
+						TextOpen[i].style.display = "block";
+					}
+					for(var i = 0; i < TextBack.length; i++) {
+						TextBack[i].style.display = "block";
+					}
+					for(var i = 0; i < ListCount.length; i++) {
+						ListCount[i].style.display = "block";
+					}
+				}
+			}
+		</script>
+		<style>
+			body, h1, h2, h3, h4, h5, h6 {
+				font-family: Arial, Helvetica, sans-serif;
+			}
+		</style>
+	</head>
+	<body>
+		<h2 style="margin: 0; padding: 0;">Miyoo Mini Theme Tester</h2>
+		<hr />
+		<div class="options">
+			<input id="BtnBattery" type="button" onclick="Battery()" value="Battery 100%" />
+			<input id="BtnOption" type="button" onclick="Option()" value="Option 1" />
+			<input id="BtnTextDisplay" type="button" onclick="TextDisplay()" value="Text Enabled" />
+		</div>
+		<br />
+		<div style="position: relative; width: 640px; height: 480px;" class="screen">
+			<img style="position: absolute; left: 0px; top: 0px; transform: rotate(180deg);" src="skin/background.png" id="background" />
+			<img style="position: absolute; left: 0px; top: 0px;" src="skin/bg-title.png" id="bg-title" />
+			<img style="position: absolute; left: 20px; top: 9px;" src="skin/miyoo-topbar.png" />
+			<img style="position: absolute; left: 572px; top: 6px;" src="skin/power-full-icon.png" id="power-icon" />
+			<img style="position: absolute; left: 0px; top: 60px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 10px; top: 91px;" src="skin/ic-recent-f.png" id="ic-recent" />
+			<img style="position: absolute; left: 165px; top: 91px;" src="skin/ic-favorite-n.png" id="ic-favorite" />
+			<img style="position: absolute; left: 320px; top: 91px;" src="skin/ic-game-n.png" id="ic-game" />
+			<img style="position: absolute; left: 475px; top: 91px;" src="skin/ic-retroarch-n.png" id="ic-retroarch" />
+			<img style="position: absolute; left: 275px; top: 390px;" src="skin/dot-a.png" id="dot-x-1" />
+			<img style="position: absolute; left: 290px; top: 390px;" src="skin/dot-n.png" id="dot-x-2" />
+			<img style="position: absolute; left: 305px; top: 390px;" src="skin/dot-n.png" id="dot-x-3" />
+			<img style="position: absolute; left: 320px; top: 390px;" src="skin/dot-n.png" id="dot-x-4" />
+			<img style="position: absolute; left: 335px; top: 390px;" src="skin/dot-n.png" id="dot-x-5" />
+			<img style="position: absolute; left: 350px; top: 390px;" src="skin/dot-n.png" id="dot-x-6" />
+			<img style="position: absolute; left: 0px; top: 420px;" src="skin/tips-bar-bg.png" id="tips-bar-bg" />
+			<img style="position: absolute; left: 20px; top: 423px;" src="skin/icon-A-54.png" id="icon-A-54" />
+			<img style="position: absolute; left: 212px; top: 423px;" src="skin/icon-B-54.png" id="icon-B-54" />
+			<p style="position: absolute; text-align: center; width: 156px; left: 10px; top: 243px; color: #FFFFFF; font-size: 25px;" id="Opt1Text">Recent</p>
+			<p style="position: absolute; text-align: center; width: 156px; left: 165px; top: 243px; color: #FFFFFF; font-size: 25px;" id="Opt2Text">Favorites</p>
+			<p style="position: absolute; text-align: center; width: 156px; left: 320px; top: 243px; color: #FFFFFF; font-size: 25px;" id="Opt3Text">Consoles</p>
+			<p style="position: absolute; text-align: center; width: 156px; left: 475px; top: 243px; color: #FFFFFF; font-size: 25px;" id="Opt4Text">Expert</p>
+			<p style="position: absolute; left: 79px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextOpen">OPEN</p>
+			<p style="position: absolute; left: 271px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextBack">BACK</p>
+		</div>
+		<br />
+		<div style="position: relative; width: 640px; height: 480px;" class="screen">
+			<img style="position: absolute; left: 0px; top: 0px; transform: rotate(180deg);" src="skin/background.png" id="background" />
+			<img style="position: absolute; left: 0px; top: 0px;" src="skin/bg-title.png" id="bg-title" />
+			<img style="position: absolute; left: 572px; top: 6px;" src="skin/power-full-icon.png" id="power-icon" />
+			<img style="position: absolute; left: 0px; top: 60px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 64px;" src="skin/bg-list-s.png" id="bg-list-s" />
+			<img style="position: absolute; left: 0px; top: 120px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 180px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 240px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 300px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 360px;" src="skin/div-line-h.png" id="div-line-h" />
+			<img style="position: absolute; left: 0px; top: 420px;" src="skin/tips-bar-bg.png" id="tips-bar-bg" />
+			<img style="position: absolute; left: 20px; top: 423px;" src="skin/icon-A-54.png" id="icon-A-54" />
+			<img style="position: absolute; left: 212px; top: 423px;" src="skin/icon-B-54.png" id="icon-B-54" />
+			<p style="position: absolute; left: 79px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextOpen">OPEN</p>
+			<p style="position: absolute; left: 271px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextBack">BACK</p>
+			<p style="position: absolute; margin: 0; padding-top: 10px; text-align: center; left: 0px; top: 0px; width: 640px; height: 60px; color: #FFFFFF; font-size: 32px;" id="ListTitle">Title</p>
+			<p style="position: absolute; left: 20px; top: 50px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 20px; top: 110px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 20px; top: 170px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 20px; top: 230px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 20px; top: 290px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 20px; top: 350px; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			<p style="position: absolute; left: 549px; top: 386px; color: #FFFFFF; font-size: 40px;" id="ListCount">1/8</p>
+		</div>
+		
+		<br />
+		<div style="position: relative; width: 640px; height: 480px;" class="screen">
+			<img style="position: absolute; left: 0px; top: 0px; transform: rotate(180deg);" src="skin/background.png" id="background" />
+			<img style="position: absolute; left: 0px; top: 0px;" src="skin/bg-title.png" id="bg-title" />
+			<img style="position: absolute; left: 572px; top: 6px;" src="skin/power-full-icon.png" id="power-icon" />
+			<img style="position: absolute; left: 0px; top: 60px;" src="skin/div-line-h.png" id="div-line-h" />
+			
+			
+			<img style="position: absolute; left: 12px; top: 77px;" src="skin/bg-game-item-f.png" id="1" />
+			<img style="position: absolute; left: 167px; top: 77px;" src="skin/bg-game-item-n.png" id="1" />
+			<img style="position: absolute; left: 322px; top: 77px;" src="skin/bg-game-item-n.png" id="1" />
+			<img style="position: absolute; left: 477px; top: 77px;" src="skin/bg-game-item-n.png" id="1" />
+			
+			<img style="position: absolute; left: 12px; top: 247px;" src="skin/bg-game-item-n.png" id="1" />
+			<img style="position: absolute; left: 167px; top: 247px;" src="skin/bg-game-item-n.png" id="1" />
+			<img style="position: absolute; left: 322px; top: 247px;" src="skin/bg-game-item-n.png" id="1" />
+			<img style="position: absolute; left: 477px; top: 247px;" src="skin/bg-game-item-n.png" id="1" />
+			
+			<img style="position: absolute; left: 0px; top: 420px;" src="skin/tips-bar-bg.png" id="tips-bar-bg" />
+			<img style="position: absolute; left: 20px; top: 423px;" src="skin/icon-A-54.png" id="icon-A-54" />
+			<img style="position: absolute; left: 212px; top: 423px;" src="skin/icon-B-54.png" id="icon-B-54" />
+			<p style="position: absolute; left: 79px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextOpen">OPEN</p>
+			<p style="position: absolute; left: 271px; top: 386px; color: #FFFFFF; font-size: 40px;" id="TextBack">BACK</p>
+			<p style="position: absolute; left: 549px; top: 386px; color: #FFFFFF; font-size: 40px;" id="ListCount">1/8</p>
+			
+			<img style="position: absolute; left: 0px; top: 0px;" src="MainUI_020.png2" id="" />
+			
+			
+			<p style="position: absolute; left: 20px; top: 168px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 176px; top: 168px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 331px; top: 168px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 486px; top: 168px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			
+			
+			
+			<p style="position: absolute; left: 20px; top: 338px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 176px; top: 338px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 331px; top: 338px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			<p style="position: absolute; left: 486px; top: 338px; width: 135px; text-align: center; color: #FFFFFF; font-size: 25px;" id="ListItem">List Item</p>
+			
+			
+		</div>
+		
+		
+		
+	</body>
+</html>
